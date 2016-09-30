@@ -90,7 +90,8 @@ class WeatherHistory_ViewController: UIViewController, UITableViewDelegate, UITa
         
 //        cell.botDecoConstraint.constant = 120
         cell.hideView.isHidden = true
-        cell.weatherBotDecoTwo.isHidden = false
+        cell.weatherBotDecoTwo.isHidden = true
+        cell.btnShowMore.isHidden = true
         
 //        cell.imgWeatherIcon.image = weatherReportList[indexPath.row].weatherIconImage
 //        cell.lblWeatherCode.text = weatherReportList[indexPath.row].weatherCode as String
