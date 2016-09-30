@@ -75,14 +75,22 @@ class WeatherHistory_ViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.separatorColor = UIColor.clear
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherHistoryCell", for: indexPath) as! WeatherHistory_TableViewCell
+        
         cell.weatherTopDeco.makeCustomRoundBorders(corners: [.topLeft, .topRight], radius: 20, fillColor: UIColor.clear, borderColor: UIColor.clear, borderWidth: 0)
-        cell.weatherBotDeco.makeCustomRoundBorders(corners: [.bottomLeft, .bottomRight], radius: 20, fillColor: UIColor.clear, borderColor: UIColor.clear, borderWidth: 0)
+        cell.weatherBotDeco.makeCustomRoundBorders(corners: [.bottomLeft, .bottomRight], radius: 10, fillColor: UIColor.clear, borderColor: UIColor.clear, borderWidth: 0)
+        cell.weatherBotDecoTwo.makeCustomRoundBorders(corners: [.bottomLeft, .bottomRight], radius: 10, fillColor: UIColor.clear, borderColor: UIColor.clear, borderWidth: 0)
+        
         cell.weatherTopDeco.backgroundColor = UIColor (red: 200/255, green: 200/255, blue: 200/255, alpha: 0.5)
         cell.weatherBotDeco.backgroundColor = UIColor (red: 150/255, green: 200/255, blue: 200/255, alpha: 0.5)
+        cell.weatherBotDecoTwo.backgroundColor = UIColor (red: 150/255, green: 200/255, blue: 200/255, alpha: 0.5)
         
         weatherList_Element.getWeatherData(completionWithSuccess: {
             self.weatherList_Element.setLabelData(weatherIcon: cell.imgWeatherIcon, weatherCode: cell.lblWeatherCode, weatherDesc: cell.lblWeatherDesc, observeTime: cell.lblObserveTime, precipMM: cell.lblPreceipMM, temperature: cell.lblTemp, winddir: cell.lblWindDir, winddeg: cell.lblWindDeg, windspeedKmph: cell.lblWindSpeedKm, windspeedMph: cell.lblWindSpeedMile)
             }, weatherObjIndex: indexPath.row)
+        
+//        cell.botDecoConstraint.constant = 120
+        cell.hideView.isHidden = true
+        cell.weatherBotDecoTwo.isHidden = false
         
 //        cell.imgWeatherIcon.image = weatherReportList[indexPath.row].weatherIconImage
 //        cell.lblWeatherCode.text = weatherReportList[indexPath.row].weatherCode as String
@@ -98,6 +106,41 @@ class WeatherHistory_ViewController: UIViewController, UITableViewDelegate, UITa
      return cell
      }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let temp = indexPath.row
+        if (selectedTableCell == temp) {
+            selectedTableCell = -1
+        }
+        else {
+            selectedTableCell = temp
+        }
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: indexPath) as! WeatherHistory_TableViewCell
+        if (selectedTableCell != -1) {
+            cell.hideView.isHidden = false
+            cell.weatherBotDecoTwo.isHidden = false
+        }
+        else {
+            cell.hideView.isHidden = true
+            cell.weatherBotDecoTwo.isHidden = true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (selectedTableCell == indexPath.row) {
+//            let cell = tableView.cellForRow(at: indexPath) as! WeatherHistory_TableViewCell
+//            cell.botDecoConstraint.constant = 160
+            return 210
+        }
+        return 120
+        
+        
+    }
+    
+    @IBAction func showMoreInTable(_ sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

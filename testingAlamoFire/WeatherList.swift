@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 var weatherReportList = [HistoryWeather()]
+var selectedTableCell: Int = -1
 
 class WeatherList {
     var weatherTableIndex: NSArray

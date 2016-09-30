@@ -25,7 +25,19 @@ class WeatherHistory_TableViewCell: UITableViewCell {
     
     @IBOutlet weak var weatherTopDeco: WeatherBGView!
     @IBOutlet weak var weatherBotDeco: WeatherBGView!
+    @IBOutlet weak var weatherBotDecoTwo: WeatherBGView!
+    @IBOutlet weak var botDecoConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hideView: UIView!
     
+    var cellDropHeight: Bool = false
+    @IBAction func ShowMore(_ sender: UIButton) {
+//        if (cellDropHeight) {
+//            cellDropHeight = false
+//        }
+//        else {
+//            cellDropHeight = true
+//        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -162,7 +162,93 @@
                                             <frame key="frameInset" width="375" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mi5-g5-XLe" customClass="WeatherBGView" customModule="testingAlamoFire" customModuleProvider="target"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-3q-tHC" userLabel="hideView">
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpZ-qr-iwd">
+                                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="56U-Yv-lYB"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6x-C2-5PO">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s8x-qc-fkt">
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dRC-KN-u11">
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-Xa-fzZ">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-oL-xKQ">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-QW-soV">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-IM-1Il">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KiC-W8-txq">
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-E7-919">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg7-as-c9s">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE5-U6-SNL">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-iq-RBo">
+                                                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="bpZ-qr-iwd" firstAttribute="width" secondItem="jZQ-3q-tHC" secondAttribute="width" id="7Lt-3i-ADo"/>
+                                                        <constraint firstItem="s8x-qc-fkt" firstAttribute="width" secondItem="jZQ-3q-tHC" secondAttribute="width" id="9Zm-3c-gq8"/>
+                                                        <constraint firstItem="bpZ-qr-iwd" firstAttribute="top" secondItem="jZQ-3q-tHC" secondAttribute="top" id="Jw0-IF-zNL"/>
+                                                        <constraint firstItem="s8x-qc-fkt" firstAttribute="top" secondItem="r6x-C2-5PO" secondAttribute="bottom" constant="10" id="Xhb-Qh-x0t"/>
+                                                        <constraint firstItem="s8x-qc-fkt" firstAttribute="centerX" secondItem="jZQ-3q-tHC" secondAttribute="centerX" id="aaS-hz-nqI"/>
+                                                        <constraint firstItem="r6x-C2-5PO" firstAttribute="centerX" secondItem="jZQ-3q-tHC" secondAttribute="centerX" id="jwT-h6-Oz6"/>
+                                                        <constraint firstItem="bpZ-qr-iwd" firstAttribute="centerX" secondItem="jZQ-3q-tHC" secondAttribute="centerX" id="wDv-cS-wLd"/>
+                                                        <constraint firstItem="r6x-C2-5PO" firstAttribute="top" secondItem="bpZ-qr-iwd" secondAttribute="bottom" constant="5" id="z4K-53-WmN"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mi5-g5-XLe" customClass="WeatherBGView" customModule="testingAlamoFire" customModuleProvider="target">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="w9U-MQ-l1X"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNL-r3-KA6" customClass="WeatherBGView" customModule="testingAlamoFire" customModuleProvider="target">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="8dI-YZ-mNF"/>
+                                                    </constraints>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbm-UO-1nu" customClass="WeatherBGView" customModule="testingAlamoFire" customModuleProvider="target">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="bQa-yC-UeU"/>
@@ -171,6 +257,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-eB-5Lc">
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="Show More"/>
+                                                    <connections>
+                                                        <action selector="ShowMore:" destination="Dmu-k8-bal" eventType="touchUpInside" id="jH4-Db-TmZ"/>
+                                                        <action selector="showMoreInTable:" destination="VfS-qp-qha" eventType="touchUpInside" id="YXl-46-Mi2"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weather : 101" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0b-M6-r3p">
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
@@ -203,105 +293,47 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpZ-qr-iwd">
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="56U-Yv-lYB"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6x-C2-5PO">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s8x-qc-fkt">
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dRC-KN-u11">
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-Xa-fzZ">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-oL-xKQ">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-QW-soV">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-IM-1Il">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KiC-W8-txq">
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhQ-E7-919">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg7-as-c9s">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE5-U6-SNL">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-iq-RBo">
-                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bpZ-qr-iwd" firstAttribute="centerX" secondItem="yts-B1-sNY" secondAttribute="centerX" id="59v-fC-fbH"/>
+                                                <constraint firstItem="jZQ-3q-tHC" firstAttribute="top" secondItem="fEV-o7-OQF" secondAttribute="bottom" constant="5" id="3bC-aH-xX5"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="jZQ-3q-tHC" secondAttribute="leading" id="3zF-a7-FQw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jZQ-3q-tHC" secondAttribute="bottom" constant="5" id="6X5-Z0-skP"/>
                                                 <constraint firstItem="VJR-1h-yEX" firstAttribute="top" secondItem="kCZ-K3-phX" secondAttribute="top" id="Auv-r5-wR9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ehq-iN-g3m" secondAttribute="trailing" constant="10" id="B5J-mf-zHe"/>
                                                 <constraint firstItem="Hbm-UO-1nu" firstAttribute="top" secondItem="yts-B1-sNY" secondAttribute="topMargin" constant="5" id="Gae-ib-7ns"/>
                                                 <constraint firstItem="mi5-g5-XLe" firstAttribute="leading" secondItem="yts-B1-sNY" secondAttribute="leadingMargin" id="KW2-W8-p2V"/>
                                                 <constraint firstItem="mi5-g5-XLe" firstAttribute="top" secondItem="Hbm-UO-1nu" secondAttribute="bottom" id="SQ7-fG-XdA"/>
-                                                <constraint firstItem="r6x-C2-5PO" firstAttribute="top" secondItem="bpZ-qr-iwd" secondAttribute="bottom" constant="5" id="WEm-k7-FMW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="s8x-qc-fkt" secondAttribute="bottom" constant="5" id="WNv-6Y-HKJ"/>
                                                 <constraint firstItem="Ehq-iN-g3m" firstAttribute="top" secondItem="AKA-C1-gsy" secondAttribute="top" id="Ye1-Df-oAc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VJR-1h-yEX" secondAttribute="trailing" constant="10" id="ZkP-CG-rSP"/>
                                                 <constraint firstItem="fEV-o7-OQF" firstAttribute="top" secondItem="Hbm-UO-1nu" secondAttribute="bottom" constant="5" id="dPC-zM-t13"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mi5-g5-XLe" secondAttribute="trailing" id="e9z-hg-c5q"/>
                                                 <constraint firstItem="kCZ-K3-phX" firstAttribute="centerX" secondItem="yts-B1-sNY" secondAttribute="centerX" id="flo-pt-v03"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="h0b-M6-r3p" secondAttribute="leading" constant="-10" id="gTP-Vj-Dhw"/>
+                                                <constraint firstItem="XNL-r3-KA6" firstAttribute="top" secondItem="Hbm-UO-1nu" secondAttribute="bottom" id="gny-E8-U03"/>
                                                 <constraint firstItem="kCZ-K3-phX" firstAttribute="top" secondItem="fEV-o7-OQF" secondAttribute="top" id="hDF-bS-Hn8"/>
                                                 <constraint firstAttribute="topMargin" secondItem="h0b-M6-r3p" secondAttribute="top" constant="-15" id="iUS-xZ-iPx"/>
-                                                <constraint firstItem="s8x-qc-fkt" firstAttribute="width" secondItem="yts-B1-sNY" secondAttribute="width" id="kPY-OP-cUo"/>
                                                 <constraint firstItem="Hbm-UO-1nu" firstAttribute="leading" secondItem="yts-B1-sNY" secondAttribute="leadingMargin" id="kkI-aR-8yz"/>
                                                 <constraint firstItem="gkc-eB-5Lc" firstAttribute="centerY" secondItem="h0b-M6-r3p" secondAttribute="centerY" id="lTz-Mt-XRh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="mi5-g5-XLe" secondAttribute="bottom" id="mtT-q9-gPc"/>
-                                                <constraint firstItem="s8x-qc-fkt" firstAttribute="top" secondItem="r6x-C2-5PO" secondAttribute="bottom" constant="10" id="n9r-2l-5si"/>
                                                 <constraint firstItem="AKA-C1-gsy" firstAttribute="top" secondItem="kCZ-K3-phX" secondAttribute="bottom" constant="10" id="nhg-fr-XKC"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hbm-UO-1nu" secondAttribute="trailing" id="nrm-ME-mCI"/>
                                                 <constraint firstItem="AKA-C1-gsy" firstAttribute="centerX" secondItem="yts-B1-sNY" secondAttribute="centerX" id="oxd-PQ-IQl"/>
-                                                <constraint firstItem="bpZ-qr-iwd" firstAttribute="top" secondItem="fEV-o7-OQF" secondAttribute="bottom" constant="5" id="s2F-79-ACa"/>
-                                                <constraint firstItem="s8x-qc-fkt" firstAttribute="centerX" secondItem="yts-B1-sNY" secondAttribute="centerX" id="sMX-Qx-C96"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XNL-r3-KA6" secondAttribute="trailing" id="pC4-pi-qDn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jZQ-3q-tHC" secondAttribute="trailing" id="pqe-n3-aFx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gkc-eB-5Lc" secondAttribute="trailing" constant="10" id="sj9-jz-cgR"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="XNL-r3-KA6" secondAttribute="leading" id="vl5-Zy-7OU"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="fEV-o7-OQF" secondAttribute="leading" constant="-10" id="w2y-9G-QCb"/>
-                                                <constraint firstItem="bpZ-qr-iwd" firstAttribute="width" secondItem="yts-B1-sNY" secondAttribute="width" multiplier="0.9" constant="1" id="xJ9-vG-ho5"/>
-                                                <constraint firstItem="r6x-C2-5PO" firstAttribute="centerX" secondItem="yts-B1-sNY" secondAttribute="centerX" id="yYB-b1-4L6"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="mtT-q9-gPc"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="botDecoConstraint" destination="w9U-MQ-l1X" id="dY2-Fn-Wij"/>
                                             <outlet property="btnShowMore" destination="gkc-eB-5Lc" id="7JM-2i-A3q"/>
+                                            <outlet property="hideView" destination="jZQ-3q-tHC" id="0vn-At-ShD"/>
                                             <outlet property="imgWeatherIcon" destination="fEV-o7-OQF" id="H1Z-Fm-a7t"/>
                                             <outlet property="lblObserveTime" destination="AKA-C1-gsy" id="yjU-1A-KhF"/>
                                             <outlet property="lblPreceipMM" destination="VJR-1h-yEX" id="vjh-FH-RAT"/>
@@ -313,6 +345,7 @@
                                             <outlet property="lblWindSpeedKm" destination="gE5-U6-SNL" id="xxm-M4-r1W"/>
                                             <outlet property="lblWindSpeedMile" destination="OO2-iq-RBo" id="Odp-5l-6io"/>
                                             <outlet property="weatherBotDeco" destination="mi5-g5-XLe" id="zLe-0B-fty"/>
+                                            <outlet property="weatherBotDecoTwo" destination="XNL-r3-KA6" id="Ilb-Da-MBC"/>
                                             <outlet property="weatherTopDeco" destination="Hbm-UO-1nu" id="4TN-gO-Ffn"/>
                                         </connections>
                                     </tableViewCell>
